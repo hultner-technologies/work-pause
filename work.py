@@ -110,8 +110,6 @@ def cli(ctx):
         click.echo("Active projects:")
         for project in projects:
             click.echo(project.name)
-    else:
-        pass
 
 
 @cli.command()
