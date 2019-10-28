@@ -11,9 +11,10 @@ bpython = "*"
 click = "*"
 pydantic = "*"
 sh = "*"
+bpython = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.7.*"
 
 [pipenv]
 # Needed for black
