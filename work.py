@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from typing import List, Optional
+from typing import Iterator, List, Optional
 from enum import Enum
 
 import click
@@ -79,8 +79,11 @@ def load_projects(projects: List[Dict]) -> List[Project]:
 
 # Make this json loads/dumps
 # TODO: Look into tee for lazy evaluation but mutliple iteration
-projects: List[Project] = load_projects(
-    [{"name": "ec", "processes": ["dotnet", "docker", "npm", "node"]}]
+projects: Iterator[Project] = load_projects(
+    [
+        {"name": "ec", "processes": ["dotnet", "docker", "npm", "node"]},
+        {"name": "docker", "processes": ["docker"]},
+    ]
 )
 
 
